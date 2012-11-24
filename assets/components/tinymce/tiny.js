@@ -220,6 +220,11 @@ MODx.loadRTE = function(id) {
         tinyMCE.execCommand('mceAddControl',false,id);
     }
 };
+MODx.unloadRTE = function(id) {
+    var editor = tinyMCE.get(id);
+    if (editor)
+        editor.remove();
+};
 MODx.afterTVLoad = function() {
     Tiny.onTVLoad();
 };
